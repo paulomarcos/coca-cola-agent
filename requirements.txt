@@ -1,0 +1,9 @@
+APScheduler==3.11.0
+beautifulsoup4==4.12.2
+langchain==0.3.25
+langchain-community==0.3.24
+langchain-core==0.3.60
+lxml==5.4.0
+openai==1.79.0
+python-dotenv==1.0.0
+requests==2.32.3

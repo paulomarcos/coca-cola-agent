@@ -1,0 +1,893 @@
+2025-06-13 13:56:09,063 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-13 13:56:09,063 - INFO - Scheduler configured. Press Ctrl+C to exit.
+2025-06-13 13:56:09,063 - INFO - The first scheduled run will be at the next 3:00 AM.
+2025-06-13 13:56:09,064 - INFO - Added job "run_daily_marketing_pipeline" to job store "default"
+2025-06-13 13:56:09,064 - INFO - Scheduler started
+2025-06-13 13:56:37,873 - INFO - Scheduler stopped.
+2025-06-13 13:57:11,899 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-13 13:57:11,899 - INFO - Scheduler configured. Press Ctrl+C to exit.
+2025-06-13 13:57:11,899 - INFO - The first scheduled run will be at the next 3:00 AM.
+2025-06-13 13:57:11,899 - INFO - Running an initial job now for testing purposes...
+2025-06-13 13:57:11,899 - INFO - ==================================================
+2025-06-13 13:57:11,899 - INFO - STARTING DAILY MARKETING PIPELINE RUN
+2025-06-13 13:57:11,899 - INFO - ==================================================
+2025-06-13 13:57:11,899 - INFO - --- Processing city: São Paulo ---
+2025-06-13 13:57:11,899 - INFO - Simulating SCAN for São Paulo at https://g1.globo.com/sp/sao-paulo/
+2025-06-13 13:57:16,905 - WARNING - No events found or returned from scanner for São Paulo.
+2025-06-13 13:57:16,905 - INFO - --- Processing city: New York ---
+2025-06-13 13:57:16,905 - INFO - Simulating SCAN for New York at https://gothamist.com/
+2025-06-13 13:57:21,910 - INFO - Simulating ANALYSIS for New York with 2 events.
+2025-06-13 13:57:24,915 - INFO - Found 1 high-potential opportunities for New York.
+2025-06-13 13:57:24,915 - INFO - --- Processing city: Tokyo ---
+2025-06-13 13:57:24,916 - INFO - Simulating SCAN for Tokyo at https://www.timeout.com/tokyo/things-to-do
+2025-06-13 13:57:29,920 - INFO - Simulating ANALYSIS for Tokyo with 2 events.
+2025-06-13 13:57:32,926 - INFO - Found 1 high-potential opportunities for Tokyo.
+2025-06-13 13:57:32,928 - INFO - Successfully saved 2 opportunities to marketing_opportunities_2025-06-13.json
+2025-06-13 13:57:32,928 - INFO - ==================================================
+2025-06-13 13:57:32,928 - INFO - DAILY MARKETING PIPELINE RUN FINISHED
+2025-06-13 13:57:32,928 - INFO - ==================================================
+2025-06-13 13:57:32,930 - INFO - Added job "run_daily_marketing_pipeline" to job store "default"
+2025-06-13 13:57:32,930 - INFO - Scheduler started
+2025-06-13 13:57:40,815 - INFO - Scheduler stopped.
+2025-06-16 13:07:56,044 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 13:07:56,044 - INFO - Scheduler configured to run daily at 3:00 AM. Press Ctrl+C to exit.
+2025-06-16 13:07:56,045 - INFO - Running an initial job now for testing purposes...
+2025-06-16 13:07:56,045 - INFO - ================================================================================
+2025-06-16 13:07:56,045 - INFO - STARTING FULL DAILY MARKETING PIPELINE RUN
+2025-06-16 13:07:56,045 - INFO - ================================================================================
+2025-06-16 13:07:56,045 - INFO - --- Stage 1: Scanning São Paulo ---
+2025-06-16 13:07:56,045 - INFO - Initiating event scan for URL: https://g1.globo.com/sp/sao-paulo/
+2025-06-16 13:07:56,045 - INFO - Scraping website content...
+2025-06-16 13:07:58,618 - INFO - Scraping successful. Content length: 15000 chars.
+2025-06-16 13:07:58,619 - INFO - Analyzing content with LLM...
+2025-06-16 13:08:01,538 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:08:01,606 - INFO - LLM analysis complete. Found 2 potential events.
+2025-06-16 13:08:01,606 - INFO - --- Stage 2: Analyzing Events for São Paulo ---
+2025-06-16 13:08:01,606 - INFO - Initiating trend analysis for São Paulo...
+2025-06-16 13:08:01,606 - INFO - Loading trend analyzer prompt...
+2025-06-16 13:08:01,615 - INFO - Invoking LLM for analysis of 2 events...
+2025-06-16 13:08:05,651 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:08:05,654 - INFO - LLM analysis complete. Processed 2 events.
+2025-06-16 13:08:05,654 - INFO - Found 1 high-potential opportunities for São Paulo.
+2025-06-16 13:08:05,654 - INFO - --- Stage 1: Scanning New York ---
+2025-06-16 13:08:05,654 - INFO - Initiating event scan for URL: https://gothamist.com/
+2025-06-16 13:08:05,654 - INFO - Scraping website content...
+2025-06-16 13:08:06,479 - INFO - Scraping successful. Content length: 5476 chars.
+2025-06-16 13:08:06,479 - INFO - Analyzing content with LLM...
+2025-06-16 13:08:08,898 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:08:08,902 - INFO - LLM analysis complete. Found 3 potential events.
+2025-06-16 13:08:08,902 - INFO - --- Stage 2: Analyzing Events for New York ---
+2025-06-16 13:08:08,903 - INFO - Initiating trend analysis for New York...
+2025-06-16 13:08:08,903 - INFO - Loading trend analyzer prompt...
+2025-06-16 13:08:08,921 - INFO - Invoking LLM for analysis of 3 events...
+2025-06-16 13:08:18,331 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:08:18,343 - INFO - LLM analysis complete. Processed 3 events.
+2025-06-16 13:08:18,343 - INFO - --- Stage 1: Scanning Tokyo ---
+2025-06-16 13:08:18,343 - INFO - Initiating event scan for URL: https://www.timeout.com/tokyo/things-to-do
+2025-06-16 13:08:18,343 - INFO - Scraping website content...
+2025-06-16 13:08:20,466 - INFO - Scraping successful. Content length: 9549 chars.
+2025-06-16 13:08:20,466 - INFO - Analyzing content with LLM...
+2025-06-16 13:08:23,363 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:08:23,377 - INFO - LLM analysis complete. Found 4 potential events.
+2025-06-16 13:08:23,377 - INFO - --- Stage 2: Analyzing Events for Tokyo ---
+2025-06-16 13:08:23,377 - INFO - Initiating trend analysis for Tokyo...
+2025-06-16 13:08:23,377 - INFO - Loading trend analyzer prompt...
+2025-06-16 13:08:23,395 - INFO - Invoking LLM for analysis of 4 events...
+2025-06-16 13:08:31,932 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:08:31,937 - INFO - LLM analysis complete. Processed 4 events.
+2025-06-16 13:08:31,937 - INFO - Found 2 high-potential opportunities for Tokyo.
+2025-06-16 13:08:31,937 - INFO - 
+--- Stage 3: Starting Creative Generation for 3 events ---
+2025-06-16 13:08:31,937 - INFO - 
+>>> Generating campaign for: 'O que explica a 'febre' por loja do BTS e filas imensas para viver experiências 'instagramáveis' em SP' in São Paulo <<<
+2025-06-16 13:08:31,937 - INFO - Initiating creative direction for event: 'O que explica a 'febre' por loja do BTS e filas imensas para viver experiências 'instagramáveis' em SP'
+2025-06-16 13:08:31,937 - INFO - Loading creative director prompt...
+2025-06-16 13:08:31,959 - INFO - Invoking LLM to generate creative brief...
+2025-06-16 13:08:35,386 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:08:35,390 - INFO - Creative brief generated successfully.
+2025-06-16 13:08:35,390 - INFO - Generating copy and visuals for 'O que explica a 'febre' por loja do BTS e filas imensas para viver experiências 'instagramáveis' em SP'...
+2025-06-16 13:08:35,390 - INFO - Initiating copywriting for city: São Paulo
+2025-06-16 13:08:35,390 - INFO - Working from creative angle: 'Position Coca-Cola as the perfect companion to the exciting and vibrant world of BTS, enhancing the joy of fandom with refreshing moments that make the experience even more memorable. Just like BTS unites fans around the world, Coca-Cola unites people with the simple pleasure of a shared drink.'
+2025-06-16 13:08:35,390 - INFO - Loading copywriter prompt...
+2025-06-16 13:08:35,409 - INFO - Invoking LLM to generate copy for São Paulo...
+2025-06-16 13:08:39,104 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:08:39,108 - INFO - Copy generated successfully.
+2025-06-16 13:08:39,108 - INFO - Initiating visual strategy for city: São Paulo
+2025-06-16 13:08:39,108 - INFO - Working from creative angle: 'Position Coca-Cola as the perfect companion to the exciting and vibrant world of BTS, enhancing the joy of fandom with refreshing moments that make the experience even more memorable. Just like BTS unites fans around the world, Coca-Cola unites people with the simple pleasure of a shared drink.'
+2025-06-16 13:08:39,108 - INFO - Loading visual strategist prompt...
+2025-06-16 13:08:39,129 - INFO - Invoking LLM to generate image prompt...
+2025-06-16 13:08:43,813 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:08:43,817 - INFO - Image prompt generated successfully.
+2025-06-16 13:08:43,817 - INFO - Initiating image creation process...
+2025-06-16 13:08:43,817 - INFO - Using prompt: 'A vibrant and energetic scene at a BTS-themed pop-up store in São Paulo, capturing the excitement of...'
+2025-06-16 13:08:44,047 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-06-16 13:08:44,048 - ERROR - Image creation failed. Error: Error code: 400 - {'error': {'message': "Missing required parameter: 'tools[0].function'.", 'type': 'invalid_request_error', 'param': 'tools[0].function', 'code': 'missing_required_parameter'}}
+Traceback (most recent call last):
+  File "/Users/paulodores/PersonalProjects/pgt/ai/ai_course_webdevs/4 - Agents/image_creator_agent.py", line 43, in run_image_creator
+    response = client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulodores/PersonalProjects/pgt/venv3.11/lib/python3.11/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulodores/PersonalProjects/pgt/venv3.11/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 925, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/paulodores/PersonalProjects/pgt/venv3.11/lib/python3.11/site-packages/openai/_base_client.py", line 1239, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulodores/PersonalProjects/pgt/venv3.11/lib/python3.11/site-packages/openai/_base_client.py", line 1034, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Missing required parameter: 'tools[0].function'.", 'type': 'invalid_request_error', 'param': 'tools[0].function', 'code': 'missing_required_parameter'}}
+2025-06-16 13:08:44,056 - INFO - >>> Successfully created full campaign package for 'O que explica a 'febre' por loja do BTS e filas imensas para viver experiências 'instagramáveis' em SP' <<<
+2025-06-16 13:08:44,056 - INFO - 
+>>> Generating campaign for: '4 events and parties during Tokyo Pride 2025' in Tokyo <<<
+2025-06-16 13:08:44,056 - INFO - Initiating creative direction for event: '4 events and parties during Tokyo Pride 2025'
+2025-06-16 13:08:44,056 - INFO - Loading creative director prompt...
+2025-06-16 13:08:44,070 - INFO - Invoking LLM to generate creative brief...
+2025-06-16 13:08:46,577 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:08:46,581 - INFO - Creative brief generated successfully.
+2025-06-16 13:08:46,581 - INFO - Generating copy and visuals for '4 events and parties during Tokyo Pride 2025'...
+2025-06-16 13:08:46,581 - INFO - Initiating copywriting for city: Tokyo
+2025-06-16 13:08:46,581 - INFO - Working from creative angle: 'Celebrate diversity and unity by joining hands with Tokyo Pride 2025, embodying Coca-Cola's commitment to authentic human connection and inclusivity. Let's make every moment a shared celebration of who we are together.'
+2025-06-16 13:08:46,581 - INFO - Loading copywriter prompt...
+2025-06-16 13:08:46,601 - INFO - Invoking LLM to generate copy for Tokyo...
+2025-06-16 13:08:50,523 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:08:50,527 - INFO - Copy generated successfully.
+2025-06-16 13:08:50,527 - INFO - Initiating visual strategy for city: Tokyo
+2025-06-16 13:08:50,527 - INFO - Working from creative angle: 'Celebrate diversity and unity by joining hands with Tokyo Pride 2025, embodying Coca-Cola's commitment to authentic human connection and inclusivity. Let's make every moment a shared celebration of who we are together.'
+2025-06-16 13:08:50,527 - INFO - Loading visual strategist prompt...
+2025-06-16 13:08:50,548 - INFO - Invoking LLM to generate image prompt...
+2025-06-16 13:08:54,361 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:08:54,373 - INFO - Image prompt generated successfully.
+2025-06-16 13:08:54,373 - INFO - Initiating image creation process...
+2025-06-16 13:08:54,373 - INFO - Using prompt: 'A vibrant and celebratory scene set during Tokyo Pride 2025, capturing the heart of Shibuya's bustli...'
+2025-06-16 13:08:54,819 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-06-16 13:08:54,821 - ERROR - Image creation failed. Error: Error code: 400 - {'error': {'message': "Missing required parameter: 'tools[0].function'.", 'type': 'invalid_request_error', 'param': 'tools[0].function', 'code': 'missing_required_parameter'}}
+Traceback (most recent call last):
+  File "/Users/paulodores/PersonalProjects/pgt/ai/ai_course_webdevs/4 - Agents/image_creator_agent.py", line 43, in run_image_creator
+    response = client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulodores/PersonalProjects/pgt/venv3.11/lib/python3.11/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulodores/PersonalProjects/pgt/venv3.11/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 925, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/paulodores/PersonalProjects/pgt/venv3.11/lib/python3.11/site-packages/openai/_base_client.py", line 1239, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulodores/PersonalProjects/pgt/venv3.11/lib/python3.11/site-packages/openai/_base_client.py", line 1034, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Missing required parameter: 'tools[0].function'.", 'type': 'invalid_request_error', 'param': 'tools[0].function', 'code': 'missing_required_parameter'}}
+2025-06-16 13:08:54,822 - INFO - >>> Successfully created full campaign package for '4 events and parties during Tokyo Pride 2025' <<<
+2025-06-16 13:08:54,822 - INFO - 
+>>> Generating campaign for: 'Grand Hyatt Tokyo is bringing back its Pokémon rooms and meals for summer' in Tokyo <<<
+2025-06-16 13:08:54,823 - INFO - Initiating creative direction for event: 'Grand Hyatt Tokyo is bringing back its Pokémon rooms and meals for summer'
+2025-06-16 13:08:54,823 - INFO - Loading creative director prompt...
+2025-06-16 13:08:54,842 - INFO - Invoking LLM to generate creative brief...
+2025-06-16 13:08:59,172 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:08:59,181 - INFO - Creative brief generated successfully.
+2025-06-16 13:08:59,181 - INFO - Generating copy and visuals for 'Grand Hyatt Tokyo is bringing back its Pokémon rooms and meals for summer'...
+2025-06-16 13:08:59,181 - INFO - Initiating copywriting for city: Tokyo
+2025-06-16 13:08:59,181 - INFO - Working from creative angle: 'Coca-Cola will bring a refreshing twist to the Grand Hyatt Tokyo's Pokémon-themed experience by positioning itself as the beverage that enhances the joy and nostalgia of Pokémon fans. By aligning with the playful and adventurous spirit of Pokémon, Coca-Cola becomes an integral part of moments where fans relive their favorite childhood memories and create new ones with family and friends.'
+2025-06-16 13:08:59,181 - INFO - Loading copywriter prompt...
+2025-06-16 13:08:59,196 - INFO - Invoking LLM to generate copy for Tokyo...
+2025-06-16 13:09:02,449 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:09:02,453 - INFO - Copy generated successfully.
+2025-06-16 13:09:02,453 - INFO - Initiating visual strategy for city: Tokyo
+2025-06-16 13:09:02,453 - INFO - Working from creative angle: 'Coca-Cola will bring a refreshing twist to the Grand Hyatt Tokyo's Pokémon-themed experience by positioning itself as the beverage that enhances the joy and nostalgia of Pokémon fans. By aligning with the playful and adventurous spirit of Pokémon, Coca-Cola becomes an integral part of moments where fans relive their favorite childhood memories and create new ones with family and friends.'
+2025-06-16 13:09:02,453 - INFO - Loading visual strategist prompt...
+2025-06-16 13:09:02,474 - INFO - Invoking LLM to generate image prompt...
+2025-06-16 13:09:06,302 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:09:06,313 - INFO - Image prompt generated successfully.
+2025-06-16 13:09:06,313 - INFO - Initiating image creation process...
+2025-06-16 13:09:06,313 - INFO - Using prompt: 'A vibrant and enchanting scene set within the luxurious interior of the Grand Hyatt Tokyo, adorned w...'
+2025-06-16 13:09:06,550 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-06-16 13:09:06,550 - ERROR - Image creation failed. Error: Error code: 400 - {'error': {'message': "Missing required parameter: 'tools[0].function'.", 'type': 'invalid_request_error', 'param': 'tools[0].function', 'code': 'missing_required_parameter'}}
+Traceback (most recent call last):
+  File "/Users/paulodores/PersonalProjects/pgt/ai/ai_course_webdevs/4 - Agents/image_creator_agent.py", line 43, in run_image_creator
+    response = client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulodores/PersonalProjects/pgt/venv3.11/lib/python3.11/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulodores/PersonalProjects/pgt/venv3.11/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 925, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/paulodores/PersonalProjects/pgt/venv3.11/lib/python3.11/site-packages/openai/_base_client.py", line 1239, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulodores/PersonalProjects/pgt/venv3.11/lib/python3.11/site-packages/openai/_base_client.py", line 1034, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Missing required parameter: 'tools[0].function'.", 'type': 'invalid_request_error', 'param': 'tools[0].function', 'code': 'missing_required_parameter'}}
+2025-06-16 13:09:06,551 - INFO - >>> Successfully created full campaign package for 'Grand Hyatt Tokyo is bringing back its Pokémon rooms and meals for summer' <<<
+2025-06-16 13:09:06,552 - INFO - 
+Successfully saved 3 full campaign packages to full_campaign_packages_2025-06-16.json
+2025-06-16 13:09:06,552 - INFO - ================================================================================
+2025-06-16 13:09:06,552 - INFO - FULL DAILY MARKETING PIPELINE RUN FINISHED
+2025-06-16 13:09:06,552 - INFO - ================================================================================
+2025-06-16 13:09:06,552 - INFO - Added job "run_daily_marketing_pipeline" to job store "default"
+2025-06-16 13:09:06,552 - INFO - Scheduler started
+2025-06-16 13:38:46,089 - INFO - Scheduler stopped.
+2025-06-16 13:50:55,086 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-16 13:50:55,086 - INFO - Scheduler configured to run daily at 3:00 AM. Press Ctrl+C to exit.
+2025-06-16 13:50:55,086 - INFO - Running an initial job now for testing purposes...
+2025-06-16 13:50:55,086 - INFO - ================================================================================
+2025-06-16 13:50:55,086 - INFO - STARTING FULL DAILY MARKETING PIPELINE RUN
+2025-06-16 13:50:55,086 - INFO - ================================================================================
+2025-06-16 13:50:55,087 - INFO - --- Stage 1: Scanning São Paulo ---
+2025-06-16 13:50:55,087 - INFO - Initiating event scan for URL: https://g1.globo.com/sp/sao-paulo/
+2025-06-16 13:50:55,087 - INFO - Scraping website content...
+2025-06-16 13:50:57,935 - INFO - Scraping successful. Content length: 15000 chars.
+2025-06-16 13:50:57,935 - INFO - Analyzing content with LLM...
+2025-06-16 13:51:01,156 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:51:01,220 - INFO - LLM analysis complete. Found 2 potential events.
+2025-06-16 13:51:01,221 - INFO - --- Stage 2: Analyzing Events for São Paulo ---
+2025-06-16 13:51:01,221 - INFO - Initiating trend analysis for São Paulo...
+2025-06-16 13:51:01,221 - INFO - Loading trend analyzer prompt...
+2025-06-16 13:51:01,229 - INFO - Invoking LLM for analysis of 2 events...
+2025-06-16 13:51:04,812 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:51:04,817 - INFO - LLM analysis complete. Processed 2 events.
+2025-06-16 13:51:04,817 - INFO - Found 1 high-potential opportunities for São Paulo.
+2025-06-16 13:51:04,818 - INFO - --- Stage 1: Scanning New York ---
+2025-06-16 13:51:04,818 - INFO - Initiating event scan for URL: https://gothamist.com/
+2025-06-16 13:51:04,818 - INFO - Scraping website content...
+2025-06-16 13:51:06,260 - INFO - Scraping successful. Content length: 5476 chars.
+2025-06-16 13:51:06,260 - INFO - Analyzing content with LLM...
+2025-06-16 13:51:08,762 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:51:08,767 - INFO - LLM analysis complete. Found 3 potential events.
+2025-06-16 13:51:08,767 - INFO - --- Stage 2: Analyzing Events for New York ---
+2025-06-16 13:51:08,767 - INFO - Initiating trend analysis for New York...
+2025-06-16 13:51:08,767 - INFO - Loading trend analyzer prompt...
+2025-06-16 13:51:08,786 - INFO - Invoking LLM for analysis of 3 events...
+2025-06-16 13:51:16,076 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:51:16,089 - INFO - LLM analysis complete. Processed 3 events.
+2025-06-16 13:51:16,089 - INFO - --- Stage 1: Scanning Tokyo ---
+2025-06-16 13:51:16,089 - INFO - Initiating event scan for URL: https://www.timeout.com/tokyo/things-to-do
+2025-06-16 13:51:16,089 - INFO - Scraping website content...
+2025-06-16 13:51:18,572 - INFO - Scraping successful. Content length: 9549 chars.
+2025-06-16 13:51:18,572 - INFO - Analyzing content with LLM...
+2025-06-16 13:51:21,678 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:51:21,690 - INFO - LLM analysis complete. Found 4 potential events.
+2025-06-16 13:51:21,691 - INFO - --- Stage 2: Analyzing Events for Tokyo ---
+2025-06-16 13:51:21,691 - INFO - Initiating trend analysis for Tokyo...
+2025-06-16 13:51:21,691 - INFO - Loading trend analyzer prompt...
+2025-06-16 13:51:21,708 - INFO - Invoking LLM for analysis of 4 events...
+2025-06-16 13:51:29,389 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:51:29,393 - INFO - LLM analysis complete. Processed 4 events.
+2025-06-16 13:51:29,394 - INFO - Found 2 high-potential opportunities for Tokyo.
+2025-06-16 13:51:29,394 - INFO - 
+--- Stage 3: Starting Creative Generation for 3 events ---
+2025-06-16 13:51:29,394 - INFO - 
+>>> Generating campaign for: 'O que explica a 'febre' por loja do BTS e filas imensas para viver experiências 'instagramáveis' em SP' in São Paulo <<<
+2025-06-16 13:51:29,394 - INFO - Initiating creative direction for event: 'O que explica a 'febre' por loja do BTS e filas imensas para viver experiências 'instagramáveis' em SP'
+2025-06-16 13:51:29,394 - INFO - Loading creative director prompt...
+2025-06-16 13:51:29,414 - INFO - Invoking LLM to generate creative brief...
+2025-06-16 13:51:32,359 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:51:32,363 - INFO - Creative brief generated successfully.
+2025-06-16 13:51:32,363 - INFO - Generating copy and visuals for 'O que explica a 'febre' por loja do BTS e filas imensas para viver experiências 'instagramáveis' em SP'...
+2025-06-16 13:51:32,363 - INFO - Initiating copywriting for city: São Paulo
+2025-06-16 13:51:32,363 - INFO - Working from creative angle: 'Leverage the vibrant and energetic atmosphere of the BTS pop-up store to create a unique Coca-Cola experience that seamlessly integrates with the event's Instagrammable and youthful vibe. Position Coca-Cola as a catalyst for joy and connection among fans enjoying the shared excitement of BTS.'
+2025-06-16 13:51:32,363 - INFO - Loading copywriter prompt...
+2025-06-16 13:51:32,385 - INFO - Invoking LLM to generate copy for São Paulo...
+2025-06-16 13:51:35,921 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:51:35,924 - INFO - Copy generated successfully.
+2025-06-16 13:51:35,924 - INFO - Initiating visual strategy for city: São Paulo
+2025-06-16 13:51:35,924 - INFO - Working from creative angle: 'Leverage the vibrant and energetic atmosphere of the BTS pop-up store to create a unique Coca-Cola experience that seamlessly integrates with the event's Instagrammable and youthful vibe. Position Coca-Cola as a catalyst for joy and connection among fans enjoying the shared excitement of BTS.'
+2025-06-16 13:51:35,924 - INFO - Loading visual strategist prompt...
+2025-06-16 13:51:35,944 - INFO - Invoking LLM to generate image prompt...
+2025-06-16 13:51:40,214 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:51:40,219 - INFO - Image prompt generated successfully.
+2025-06-16 13:51:40,219 - INFO - Initiating image creation process...
+2025-06-16 13:51:40,219 - INFO - Using prompt: 'An energetic and vibrant scene set in front of the BTS pop-up store in São Paulo. Young, enthusiasti...'
+2025-06-16 13:52:49,724 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-16 13:52:51,096 - INFO - Saving image to file: campaign_image_20250616_135251.png
+2025-06-16 13:52:51,098 - INFO - >>> Successfully created full campaign package for 'O que explica a 'febre' por loja do BTS e filas imensas para viver experiências 'instagramáveis' em SP' <<<
+2025-06-16 13:52:51,098 - INFO - 
+>>> Generating campaign for: '4 events and parties during Tokyo Pride 2025' in Tokyo <<<
+2025-06-16 13:52:51,098 - INFO - Initiating creative direction for event: '4 events and parties during Tokyo Pride 2025'
+2025-06-16 13:52:51,098 - INFO - Loading creative director prompt...
+2025-06-16 13:52:51,110 - INFO - Invoking LLM to generate creative brief...
+2025-06-16 13:52:54,111 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:52:54,123 - INFO - Creative brief generated successfully.
+2025-06-16 13:52:54,123 - INFO - Generating copy and visuals for '4 events and parties during Tokyo Pride 2025'...
+2025-06-16 13:52:54,123 - INFO - Initiating copywriting for city: Tokyo
+2025-06-16 13:52:54,123 - INFO - Working from creative angle: 'Position Coca-Cola as an integral part of Tokyo Pride 2025 celebrations by highlighting our shared values of inclusivity, diversity, and unity, creating a platform for authentic connections that inspire moments of shared happiness and acceptance among all attendees.'
+2025-06-16 13:52:54,123 - INFO - Loading copywriter prompt...
+2025-06-16 13:52:54,142 - INFO - Invoking LLM to generate copy for Tokyo...
+2025-06-16 13:52:57,485 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:52:57,495 - INFO - Copy generated successfully.
+2025-06-16 13:52:57,495 - INFO - Initiating visual strategy for city: Tokyo
+2025-06-16 13:52:57,495 - INFO - Working from creative angle: 'Position Coca-Cola as an integral part of Tokyo Pride 2025 celebrations by highlighting our shared values of inclusivity, diversity, and unity, creating a platform for authentic connections that inspire moments of shared happiness and acceptance among all attendees.'
+2025-06-16 13:52:57,495 - INFO - Loading visual strategist prompt...
+2025-06-16 13:52:57,515 - INFO - Invoking LLM to generate image prompt...
+2025-06-16 13:53:01,484 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:53:01,489 - INFO - Image prompt generated successfully.
+2025-06-16 13:53:01,489 - INFO - Initiating image creation process...
+2025-06-16 13:53:01,489 - INFO - Using prompt: 'A lively and vibrant scene set in the heart of Tokyo during the 2025 Pride celebrations. The image c...'
+2025-06-16 13:54:04,148 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-16 13:54:05,369 - INFO - Saving image to file: campaign_image_20250616_135405.png
+2025-06-16 13:54:05,370 - INFO - >>> Successfully created full campaign package for '4 events and parties during Tokyo Pride 2025' <<<
+2025-06-16 13:54:05,370 - INFO - 
+>>> Generating campaign for: 'Grand Hyatt Tokyo is bringing back its Pokémon rooms and meals for summer' in Tokyo <<<
+2025-06-16 13:54:05,370 - INFO - Initiating creative direction for event: 'Grand Hyatt Tokyo is bringing back its Pokémon rooms and meals for summer'
+2025-06-16 13:54:05,370 - INFO - Loading creative director prompt...
+2025-06-16 13:54:05,383 - INFO - Invoking LLM to generate creative brief...
+2025-06-16 13:54:07,836 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:54:07,848 - INFO - Creative brief generated successfully.
+2025-06-16 13:54:07,848 - INFO - Generating copy and visuals for 'Grand Hyatt Tokyo is bringing back its Pokémon rooms and meals for summer'...
+2025-06-16 13:54:07,848 - INFO - Initiating copywriting for city: Tokyo
+2025-06-16 13:54:07,848 - INFO - Working from creative angle: 'Leverage the universal allure and nostalgia of Pokémon to integrate Coca-Cola as the quintessential refreshment that enhances the immersive and joyful experience of staying in the Pokémon-themed rooms and enjoying themed meals at the Grand Hyatt Tokyo.'
+2025-06-16 13:54:07,848 - INFO - Loading copywriter prompt...
+2025-06-16 13:54:07,866 - INFO - Invoking LLM to generate copy for Tokyo...
+2025-06-16 13:54:10,468 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:54:10,479 - INFO - Copy generated successfully.
+2025-06-16 13:54:10,479 - INFO - Initiating visual strategy for city: Tokyo
+2025-06-16 13:54:10,480 - INFO - Working from creative angle: 'Leverage the universal allure and nostalgia of Pokémon to integrate Coca-Cola as the quintessential refreshment that enhances the immersive and joyful experience of staying in the Pokémon-themed rooms and enjoying themed meals at the Grand Hyatt Tokyo.'
+2025-06-16 13:54:10,480 - INFO - Loading visual strategist prompt...
+2025-06-16 13:54:10,496 - INFO - Invoking LLM to generate image prompt...
+2025-06-16 13:54:14,967 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 13:54:14,970 - INFO - Image prompt generated successfully.
+2025-06-16 13:54:14,971 - INFO - Initiating image creation process...
+2025-06-16 13:54:14,971 - INFO - Using prompt: 'A vibrant and heartwarming scene set in a luxurious Pokémon-themed room at the Grand Hyatt Tokyo, fi...'
+2025-06-16 13:55:31,522 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-16 13:55:31,994 - INFO - Saving image to file: campaign_image_20250616_135531.png
+2025-06-16 13:55:31,996 - INFO - >>> Successfully created full campaign package for 'Grand Hyatt Tokyo is bringing back its Pokémon rooms and meals for summer' <<<
+2025-06-16 13:55:32,000 - INFO - 
+Successfully saved 3 full campaign packages to full_campaign_packages_2025-06-16.json
+2025-06-16 13:55:32,001 - INFO - ================================================================================
+2025-06-16 13:55:32,001 - INFO - FULL DAILY MARKETING PIPELINE RUN FINISHED
+2025-06-16 13:55:32,001 - INFO - ================================================================================
+2025-06-16 13:55:32,001 - INFO - Added job "run_daily_marketing_pipeline" to job store "default"
+2025-06-16 13:55:32,001 - INFO - Scheduler started
+2025-06-16 16:09:59,570 - INFO - Scheduler stopped.
+2025-06-18 16:37:48,977 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-06-18 16:37:48,977 - INFO - Scheduler configured to run daily at 3:00 AM. Press Ctrl+C to exit.
+2025-06-18 16:37:48,977 - INFO - Running an initial job now for testing purposes...
+2025-06-18 16:37:48,977 - INFO - ================================================================================
+2025-06-18 16:37:48,977 - INFO - STARTING FULL DAILY MARKETING PIPELINE RUN
+2025-06-18 16:37:48,977 - INFO - ================================================================================
+2025-06-18 16:37:48,977 - INFO - --- Stage 1: Scanning São Paulo ---
+2025-06-18 16:37:48,977 - INFO - Initiating event scan for URL: https://g1.globo.com/sp/sao-paulo/
+2025-06-18 16:37:48,977 - INFO - Scraping website content...
+2025-06-18 16:37:51,717 - INFO - Scraping successful. Content length: 15000 chars.
+2025-06-18 16:37:51,717 - INFO - Analyzing content with LLM...
+2025-06-18 16:37:56,003 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-18 16:37:56,053 - INFO - LLM analysis complete. Found 2 potential events.
+2025-06-18 16:37:56,053 - INFO - --- Stage 2: Analyzing Events for São Paulo ---
+2025-06-18 16:37:56,053 - INFO - Initiating trend analysis for São Paulo...
+2025-06-18 16:37:56,053 - INFO - Loading trend analyzer prompt...
+2025-06-18 16:37:56,061 - INFO - Invoking LLM for analysis of 2 events...
+2025-06-18 16:38:03,890 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-18 16:38:03,896 - INFO - LLM analysis complete. Processed 2 events.
+2025-06-18 16:38:03,896 - INFO - Found 1 high-potential opportunities for São Paulo.
+2025-06-18 16:38:03,896 - INFO - --- Stage 1: Scanning New York ---
+2025-06-18 16:38:03,896 - INFO - Initiating event scan for URL: https://gothamist.com/
+2025-06-18 16:38:03,896 - INFO - Scraping website content...
+2025-06-18 16:38:04,473 - INFO - Scraping successful. Content length: 5335 chars.
+2025-06-18 16:38:04,473 - INFO - Analyzing content with LLM...
+2025-06-18 16:38:05,720 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-18 16:38:05,724 - INFO - LLM analysis complete. Found 0 potential events.
+2025-06-18 16:38:05,724 - WARNING - No events found or returned from scanner for New York.
+2025-06-18 16:38:05,724 - INFO - --- Stage 1: Scanning Tokyo ---
+2025-06-18 16:38:05,724 - INFO - Initiating event scan for URL: https://www.timeout.com/tokyo/things-to-do
+2025-06-18 16:38:05,724 - INFO - Scraping website content...
+2025-06-18 16:38:07,029 - INFO - Scraping successful. Content length: 9549 chars.
+2025-06-18 16:38:07,029 - INFO - Analyzing content with LLM...
+2025-06-18 16:38:10,984 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-18 16:38:10,994 - INFO - LLM analysis complete. Found 4 potential events.
+2025-06-18 16:38:10,994 - INFO - --- Stage 2: Analyzing Events for Tokyo ---
+2025-06-18 16:38:10,994 - INFO - Initiating trend analysis for Tokyo...
+2025-06-18 16:38:10,994 - INFO - Loading trend analyzer prompt...
+2025-06-18 16:38:11,006 - INFO - Invoking LLM for analysis of 4 events...
+2025-06-18 16:38:24,472 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-18 16:38:24,477 - INFO - LLM analysis complete. Processed 4 events.
+2025-06-18 16:38:24,478 - INFO - Found 2 high-potential opportunities for Tokyo.
+2025-06-18 16:38:24,478 - INFO - 
+--- Stage 3: Starting Creative Generation for 3 events ---
+2025-06-18 16:38:24,478 - INFO - 
+>>> Generating campaign for: '29ª Parada do Orgulho LGBT+ terá shows do Pedro Sampaio, Pepita e Banda Uó' in São Paulo <<<
+2025-06-18 16:38:24,478 - INFO - Initiating creative direction for event: '29ª Parada do Orgulho LGBT+ terá shows do Pedro Sampaio, Pepita e Banda Uó'
+2025-06-18 16:38:24,478 - INFO - Loading creative director prompt...
+2025-06-18 16:38:24,498 - INFO - Invoking LLM to generate creative brief...
+2025-06-18 16:38:28,642 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-18 16:38:28,646 - INFO - Creative brief generated successfully.
+2025-06-18 16:38:28,646 - INFO - Generating copy and visuals for '29ª Parada do Orgulho LGBT+ terá shows do Pedro Sampaio, Pepita e Banda Uó'...
+2025-06-18 16:38:28,646 - INFO - Initiating copywriting for city: São Paulo
+2025-06-18 16:38:28,646 - INFO - Working from creative angle: 'Align Coca-Cola with the spirit of celebration and inclusivity at the São Paulo LGBT+ Pride Parade by positioning our brand as a symbol of unity and joy that elevates the event's festive atmosphere. Our presence will feel like a natural extension of the parade's core themes of diversity and togetherness.'
+2025-06-18 16:38:28,646 - INFO - Loading copywriter prompt...
+2025-06-18 16:38:28,667 - INFO - Invoking LLM to generate copy for São Paulo...
+2025-06-18 16:38:32,773 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-18 16:38:32,775 - INFO - Copy generated successfully.
+2025-06-18 16:38:32,775 - INFO - Initiating visual strategy for city: São Paulo
+2025-06-18 16:38:32,775 - INFO - Working from creative angle: 'Align Coca-Cola with the spirit of celebration and inclusivity at the São Paulo LGBT+ Pride Parade by positioning our brand as a symbol of unity and joy that elevates the event's festive atmosphere. Our presence will feel like a natural extension of the parade's core themes of diversity and togetherness.'
+2025-06-18 16:38:32,775 - INFO - Loading visual strategist prompt...
+2025-06-18 16:38:32,786 - INFO - Invoking LLM to generate image prompt...
+2025-06-18 16:38:39,104 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-18 16:38:39,108 - INFO - Image prompt generated successfully.
+2025-06-18 16:38:39,109 - INFO - Initiating image creation process...
+2025-06-18 16:38:39,109 - INFO - Using prompt: 'A vibrant, energetic scene from the São Paulo LGBT+ Pride Parade, capturing an expansive view of Ave...'
+2025-06-18 16:39:58,164 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-18 16:39:59,541 - INFO - Saving image to file: campaign_image_20250618_163959.png
+2025-06-18 16:39:59,543 - INFO - >>> Successfully created full campaign package for '29ª Parada do Orgulho LGBT+ terá shows do Pedro Sampaio, Pepita e Banda Uó' <<<
+2025-06-18 16:39:59,543 - INFO - 
+>>> Generating campaign for: '4 events and parties during Tokyo Pride 2025' in Tokyo <<<
+2025-06-18 16:39:59,543 - INFO - Initiating creative direction for event: '4 events and parties during Tokyo Pride 2025'
+2025-06-18 16:39:59,543 - INFO - Loading creative director prompt...
+2025-06-18 16:39:59,557 - INFO - Invoking LLM to generate creative brief...
+2025-06-18 16:40:04,166 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-18 16:40:04,178 - INFO - Creative brief generated successfully.
+2025-06-18 16:40:04,178 - INFO - Generating copy and visuals for '4 events and parties during Tokyo Pride 2025'...
+2025-06-18 16:40:04,178 - INFO - Initiating copywriting for city: Tokyo
+2025-06-18 16:40:04,178 - INFO - Working from creative angle: 'Coca-Cola joins Tokyo Pride 2025 to celebrate the beauty of diversity and the magic of unity. With our iconic brand embracing authentic human connection, we aim to amplify the voices of love and acceptance, creating spaces where everyone feels seen, heard, and celebrated.'
+2025-06-18 16:40:04,178 - INFO - Loading copywriter prompt...
+2025-06-18 16:40:04,195 - INFO - Invoking LLM to generate copy for Tokyo...
+2025-06-18 16:40:10,866 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-18 16:40:10,878 - INFO - Copy generated successfully.
+2025-06-18 16:40:10,878 - INFO - Initiating visual strategy for city: Tokyo
+2025-06-18 16:40:10,878 - INFO - Working from creative angle: 'Coca-Cola joins Tokyo Pride 2025 to celebrate the beauty of diversity and the magic of unity. With our iconic brand embracing authentic human connection, we aim to amplify the voices of love and acceptance, creating spaces where everyone feels seen, heard, and celebrated.'
+2025-06-18 16:40:10,878 - INFO - Loading visual strategist prompt...
+2025-06-18 16:40:10,896 - INFO - Invoking LLM to generate image prompt...
+2025-06-18 16:40:18,281 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-18 16:40:18,315 - INFO - Image prompt generated successfully.
+2025-06-18 16:40:18,315 - INFO - Initiating image creation process...
+2025-06-18 16:40:18,315 - INFO - Using prompt: 'A vibrant, joyful celebration scene at Tokyo Pride 2025, set against the iconic Shibuya Crossing. Th...'
+2025-06-18 16:41:30,028 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-18 16:41:31,344 - INFO - Saving image to file: campaign_image_20250618_164131.png
+2025-06-18 16:41:31,349 - INFO - >>> Successfully created full campaign package for '4 events and parties during Tokyo Pride 2025' <<<
+2025-06-18 16:41:31,349 - INFO - 
+>>> Generating campaign for: 'Grand Hyatt Tokyo is bringing back its Pokémon rooms and meals for summer' in Tokyo <<<
+2025-06-18 16:41:31,349 - INFO - Initiating creative direction for event: 'Grand Hyatt Tokyo is bringing back its Pokémon rooms and meals for summer'
+2025-06-18 16:41:31,349 - INFO - Loading creative director prompt...
+2025-06-18 16:41:31,376 - INFO - Invoking LLM to generate creative brief...
+2025-06-18 16:41:35,198 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-18 16:41:35,219 - INFO - Creative brief generated successfully.
+2025-06-18 16:41:35,220 - INFO - Generating copy and visuals for 'Grand Hyatt Tokyo is bringing back its Pokémon rooms and meals for summer'...
+2025-06-18 16:41:35,220 - INFO - Initiating copywriting for city: Tokyo
+2025-06-18 16:41:35,220 - INFO - Working from creative angle: 'Leverage the nostalgia and excitement of the Pokémon experience at the Grand Hyatt Tokyo to position Coca-Cola as the catalyst for creating unforgettable summer memories, bridging generations through shared moments of joy and connection.'
+2025-06-18 16:41:35,220 - INFO - Loading copywriter prompt...
+2025-06-18 16:41:35,242 - INFO - Invoking LLM to generate copy for Tokyo...
+2025-06-18 16:41:39,543 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-18 16:41:39,557 - INFO - Copy generated successfully.
+2025-06-18 16:41:39,557 - INFO - Initiating visual strategy for city: Tokyo
+2025-06-18 16:41:39,557 - INFO - Working from creative angle: 'Leverage the nostalgia and excitement of the Pokémon experience at the Grand Hyatt Tokyo to position Coca-Cola as the catalyst for creating unforgettable summer memories, bridging generations through shared moments of joy and connection.'
+2025-06-18 16:41:39,557 - INFO - Loading visual strategist prompt...
+2025-06-18 16:41:39,575 - INFO - Invoking LLM to generate image prompt...
+2025-06-18 16:41:44,400 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-18 16:41:44,405 - INFO - Image prompt generated successfully.
+2025-06-18 16:41:44,406 - INFO - Initiating image creation process...
+2025-06-18 16:41:44,406 - INFO - Using prompt: 'A magical and vibrant scene set in the Grand Hyatt Tokyo, capturing the essence of a Pokémon-themed ...'
+2025-06-18 16:43:04,060 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-06-18 16:43:05,400 - INFO - Saving image to file: campaign_image_20250618_164305.png
+2025-06-18 16:43:05,402 - INFO - >>> Successfully created full campaign package for 'Grand Hyatt Tokyo is bringing back its Pokémon rooms and meals for summer' <<<
+2025-06-18 16:43:05,403 - INFO - 
+Successfully saved 3 full campaign packages to full_campaign_packages_2025-06-18.json
+2025-06-18 16:43:05,403 - INFO - ================================================================================
+2025-06-18 16:43:05,403 - INFO - FULL DAILY MARKETING PIPELINE RUN FINISHED
+2025-06-18 16:43:05,403 - INFO - ================================================================================
+2025-06-18 16:43:05,404 - INFO - Added job "run_daily_marketing_pipeline" to job store "default"
+2025-06-18 16:43:05,404 - INFO - Scheduler started
+2025-06-18 18:03:09,651 - INFO - Scheduler stopped.
+2025-09-13 16:58:33,620 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-13 16:58:33,620 - INFO - Scheduler configured to run daily at 3:00 AM. Press Ctrl+C to exit.
+2025-09-13 16:58:33,620 - INFO - Running an initial job now for testing purposes...
+2025-09-13 16:58:33,620 - INFO - ================================================================================
+2025-09-13 16:58:33,620 - INFO - STARTING FULL DAILY MARKETING PIPELINE RUN
+2025-09-13 16:58:33,621 - INFO - ================================================================================
+2025-09-13 16:58:33,621 - INFO - --- Stage 1: Scanning São Paulo ---
+2025-09-13 16:58:33,621 - INFO - Initiating event scan for URL: https://g1.globo.com/sp/sao-paulo/
+2025-09-13 16:58:33,621 - INFO - Scraping website content...
+2025-09-13 16:58:36,168 - INFO - Scraping successful. Content length: 15000 chars.
+2025-09-13 16:58:36,168 - INFO - Analyzing content with LLM...
+2025-09-13 16:58:44,994 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 16:58:45,024 - INFO - LLM analysis complete. Found 3 potential events.
+2025-09-13 16:58:45,024 - INFO - --- Stage 2: Analyzing Events for São Paulo ---
+2025-09-13 16:58:45,024 - INFO - Initiating trend analysis for São Paulo...
+2025-09-13 16:58:45,024 - INFO - Loading trend analyzer prompt...
+2025-09-13 16:58:45,038 - INFO - Invoking LLM for analysis of 3 events...
+2025-09-13 16:58:51,108 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 16:58:51,115 - INFO - LLM analysis complete. Processed 3 events.
+2025-09-13 16:58:51,115 - INFO - Found 2 high-potential opportunities for São Paulo.
+2025-09-13 16:58:51,115 - INFO - --- Stage 1: Scanning New York ---
+2025-09-13 16:58:51,115 - INFO - Initiating event scan for URL: https://gothamist.com/
+2025-09-13 16:58:51,115 - INFO - Scraping website content...
+2025-09-13 16:58:51,634 - INFO - Scraping successful. Content length: 5262 chars.
+2025-09-13 16:58:51,634 - INFO - Analyzing content with LLM...
+2025-09-13 16:58:53,715 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 16:58:53,724 - INFO - LLM analysis complete. Found 2 potential events.
+2025-09-13 16:58:53,724 - INFO - --- Stage 2: Analyzing Events for New York ---
+2025-09-13 16:58:53,724 - INFO - Initiating trend analysis for New York...
+2025-09-13 16:58:53,724 - INFO - Loading trend analyzer prompt...
+2025-09-13 16:58:53,742 - INFO - Invoking LLM for analysis of 2 events...
+2025-09-13 16:58:59,543 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 16:58:59,549 - INFO - LLM analysis complete. Processed 2 events.
+2025-09-13 16:58:59,550 - INFO - --- Stage 1: Scanning Tokyo ---
+2025-09-13 16:58:59,550 - INFO - Initiating event scan for URL: https://www.timeout.com/tokyo/things-to-do
+2025-09-13 16:58:59,550 - INFO - Scraping website content...
+2025-09-13 16:58:59,818 - INFO - Scraping successful. Content length: 9644 chars.
+2025-09-13 16:58:59,818 - INFO - Analyzing content with LLM...
+2025-09-13 16:59:02,230 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 16:59:02,235 - INFO - LLM analysis complete. Found 4 potential events.
+2025-09-13 16:59:02,235 - INFO - --- Stage 2: Analyzing Events for Tokyo ---
+2025-09-13 16:59:02,235 - INFO - Initiating trend analysis for Tokyo...
+2025-09-13 16:59:02,235 - INFO - Loading trend analyzer prompt...
+2025-09-13 16:59:02,253 - INFO - Invoking LLM for analysis of 4 events...
+2025-09-13 16:59:10,744 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 16:59:10,754 - INFO - LLM analysis complete. Processed 4 events.
+2025-09-13 16:59:10,754 - INFO - Found 2 high-potential opportunities for Tokyo.
+2025-09-13 16:59:10,754 - INFO - 
+--- Stage 3: Starting Creative Generation for 4 events ---
+2025-09-13 16:59:10,754 - INFO - 
+>>> Generating campaign for: 'Katy Perry e Mariah no último fim de semana de The Town; veja roteiro' in São Paulo <<<
+2025-09-13 16:59:10,754 - INFO - Initiating creative direction for event: 'Katy Perry e Mariah no último fim de semana de The Town; veja roteiro'
+2025-09-13 16:59:10,754 - INFO - Loading creative director prompt...
+2025-09-13 16:59:10,773 - INFO - Invoking LLM to generate creative brief...
+2025-09-13 16:59:14,748 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 16:59:14,761 - INFO - Creative brief generated successfully.
+2025-09-13 16:59:14,762 - INFO - Generating copy and visuals for 'Katy Perry e Mariah no último fim de semana de The Town; veja roteiro'...
+2025-09-13 16:59:14,762 - INFO - Initiating copywriting for city: São Paulo
+2025-09-13 16:59:14,762 - INFO - Working from creative angle: 'Position Coca-Cola as the ultimate companion for unforgettable musical moments, celebrating the magic of live performances and the joy of being part of a vibrant community of music lovers.'
+2025-09-13 16:59:14,762 - INFO - Loading copywriter prompt...
+2025-09-13 16:59:14,777 - INFO - Invoking LLM to generate copy for São Paulo...
+2025-09-13 16:59:17,457 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 16:59:17,461 - INFO - Copy generated successfully.
+2025-09-13 16:59:17,462 - INFO - Initiating visual strategy for city: São Paulo
+2025-09-13 16:59:17,462 - INFO - Working from creative angle: 'Position Coca-Cola as the ultimate companion for unforgettable musical moments, celebrating the magic of live performances and the joy of being part of a vibrant community of music lovers.'
+2025-09-13 16:59:17,462 - INFO - Loading visual strategist prompt...
+2025-09-13 16:59:17,481 - INFO - Invoking LLM to generate image prompt...
+2025-09-13 16:59:21,820 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 16:59:21,828 - INFO - Image prompt generated successfully.
+2025-09-13 16:59:21,829 - INFO - Initiating image creation process...
+2025-09-13 16:59:21,829 - INFO - Using prompt: 'A vibrant and energetic scene at the iconic The Town music festival in São Paulo, capturing the esse...'
+2025-09-13 17:00:42,857 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-09-13 17:00:43,951 - INFO - Saving image to file: campaign-images/campaign_image_20250913_170043.png
+2025-09-13 17:00:43,952 - INFO - >>> Successfully created full campaign package for 'Katy Perry e Mariah no último fim de semana de The Town; veja roteiro' <<<
+2025-09-13 17:00:43,952 - INFO - 
+>>> Generating campaign for: 'The Town 2025: Metrô e CPTM vão funcionar 24 horas' in São Paulo <<<
+2025-09-13 17:00:43,952 - INFO - Initiating creative direction for event: 'The Town 2025: Metrô e CPTM vão funcionar 24 horas'
+2025-09-13 17:00:43,952 - INFO - Loading creative director prompt...
+2025-09-13 17:00:43,967 - INFO - Invoking LLM to generate creative brief...
+2025-09-13 17:00:47,923 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 17:00:47,928 - INFO - Creative brief generated successfully.
+2025-09-13 17:00:47,928 - INFO - Generating copy and visuals for 'The Town 2025: Metrô e CPTM vão funcionar 24 horas'...
+2025-09-13 17:00:47,928 - INFO - Initiating copywriting for city: São Paulo
+2025-09-13 17:00:47,928 - INFO - Working from creative angle: 'Position Coca-Cola as the ultimate companion for late-night festival-goers, celebrating the extended hours of connection, music, and community enabled by 24-hour metro and CPTM services.'
+2025-09-13 17:00:47,929 - INFO - Loading copywriter prompt...
+2025-09-13 17:00:47,944 - INFO - Invoking LLM to generate copy for São Paulo...
+2025-09-13 17:00:51,989 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 17:00:51,993 - INFO - Copy generated successfully.
+2025-09-13 17:00:51,993 - INFO - Initiating visual strategy for city: São Paulo
+2025-09-13 17:00:51,993 - INFO - Working from creative angle: 'Position Coca-Cola as the ultimate companion for late-night festival-goers, celebrating the extended hours of connection, music, and community enabled by 24-hour metro and CPTM services.'
+2025-09-13 17:00:51,993 - INFO - Loading visual strategist prompt...
+2025-09-13 17:00:52,012 - INFO - Invoking LLM to generate image prompt...
+2025-09-13 17:00:56,459 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 17:00:56,463 - INFO - Image prompt generated successfully.
+2025-09-13 17:00:56,464 - INFO - Initiating image creation process...
+2025-09-13 17:00:56,464 - INFO - Using prompt: 'A vibrant and energetic scene set within a bustling São Paulo metro station during The Town 2025 fes...'
+2025-09-13 17:02:15,187 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-09-13 17:02:16,609 - INFO - Saving image to file: campaign-images/campaign_image_20250913_170216.png
+2025-09-13 17:02:16,611 - INFO - >>> Successfully created full campaign package for 'The Town 2025: Metrô e CPTM vão funcionar 24 horas' <<<
+2025-09-13 17:02:16,611 - INFO - 
+>>> Generating campaign for: 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park' in Tokyo <<<
+2025-09-13 17:02:16,612 - INFO - Initiating creative direction for event: 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park'
+2025-09-13 17:02:16,612 - INFO - Loading creative director prompt...
+2025-09-13 17:02:16,647 - INFO - Invoking LLM to generate creative brief...
+2025-09-13 17:02:20,019 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 17:02:20,026 - INFO - Creative brief generated successfully.
+2025-09-13 17:02:20,026 - INFO - Generating copy and visuals for 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park'...
+2025-09-13 17:02:20,026 - INFO - Initiating copywriting for city: Tokyo
+2025-09-13 17:02:20,026 - INFO - Working from creative angle: 'Leverage the whimsical and vibrant atmosphere of the Kawaii Monster Café amusement park to highlight Coca-Cola as the refreshing centerpiece of this colorful and joyous experience. Position Coca-Cola as an integral part of the playful and imaginative world of Harajuku, enhancing every moment of fun and connection with an iconic taste that complements the unique, visually stunning setting.'
+2025-09-13 17:02:20,026 - INFO - Loading copywriter prompt...
+2025-09-13 17:02:20,044 - INFO - Invoking LLM to generate copy for Tokyo...
+2025-09-13 17:02:22,754 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 17:02:22,757 - INFO - Copy generated successfully.
+2025-09-13 17:02:22,757 - INFO - Initiating visual strategy for city: Tokyo
+2025-09-13 17:02:22,757 - INFO - Working from creative angle: 'Leverage the whimsical and vibrant atmosphere of the Kawaii Monster Café amusement park to highlight Coca-Cola as the refreshing centerpiece of this colorful and joyous experience. Position Coca-Cola as an integral part of the playful and imaginative world of Harajuku, enhancing every moment of fun and connection with an iconic taste that complements the unique, visually stunning setting.'
+2025-09-13 17:02:22,757 - INFO - Loading visual strategist prompt...
+2025-09-13 17:02:22,775 - INFO - Invoking LLM to generate image prompt...
+2025-09-13 17:02:27,175 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 17:02:27,192 - INFO - Image prompt generated successfully.
+2025-09-13 17:02:27,193 - INFO - Initiating image creation process...
+2025-09-13 17:02:27,193 - INFO - Using prompt: 'A vibrant and whimsical scene inside the Kawaii Monster Café in Harajuku, Tokyo. Bright and fantasti...'
+2025-09-13 17:03:50,319 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-09-13 17:03:51,412 - INFO - Saving image to file: campaign-images/campaign_image_20250913_170351.png
+2025-09-13 17:03:51,414 - INFO - >>> Successfully created full campaign package for 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park' <<<
+2025-09-13 17:03:51,414 - INFO - 
+>>> Generating campaign for: 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo' in Tokyo <<<
+2025-09-13 17:03:51,414 - INFO - Initiating creative direction for event: 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo'
+2025-09-13 17:03:51,415 - INFO - Loading creative director prompt...
+2025-09-13 17:03:51,436 - INFO - Invoking LLM to generate creative brief...
+2025-09-13 17:03:53,787 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 17:03:53,791 - INFO - Creative brief generated successfully.
+2025-09-13 17:03:53,792 - INFO - Generating copy and visuals for 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo'...
+2025-09-13 17:03:53,792 - INFO - Initiating copywriting for city: Tokyo
+2025-09-13 17:03:53,792 - INFO - Working from creative angle: 'Position Coca-Cola as the beverage that fuels creativity and innovation within this new cultural hub, aligning with Pharrell and Nigo's vision of a space that inspires and connects people through music, fashion, and art.'
+2025-09-13 17:03:53,792 - INFO - Loading copywriter prompt...
+2025-09-13 17:03:53,812 - INFO - Invoking LLM to generate copy for Tokyo...
+2025-09-13 17:03:56,381 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 17:03:56,389 - INFO - Copy generated successfully.
+2025-09-13 17:03:56,389 - INFO - Initiating visual strategy for city: Tokyo
+2025-09-13 17:03:56,389 - INFO - Working from creative angle: 'Position Coca-Cola as the beverage that fuels creativity and innovation within this new cultural hub, aligning with Pharrell and Nigo's vision of a space that inspires and connects people through music, fashion, and art.'
+2025-09-13 17:03:56,390 - INFO - Loading visual strategist prompt...
+2025-09-13 17:03:56,406 - INFO - Invoking LLM to generate image prompt...
+2025-09-13 17:04:00,438 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-13 17:04:00,444 - INFO - Image prompt generated successfully.
+2025-09-13 17:04:00,444 - INFO - Initiating image creation process...
+2025-09-13 17:04:00,444 - INFO - Using prompt: 'A bustling scene inside Pharrell and Nigo's new cultural complex in Tokyo, where trendsetters and cu...'
+2025-09-13 17:05:17,942 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-09-13 17:05:19,273 - INFO - Saving image to file: campaign-images/campaign_image_20250913_170519.png
+2025-09-13 17:05:19,274 - INFO - >>> Successfully created full campaign package for 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo' <<<
+2025-09-14 08:02:59,624 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-14 08:02:59,624 - INFO - Scheduler configured to run daily at 3:00 AM. Press Ctrl+C to exit.
+2025-09-14 08:02:59,624 - INFO - Running an initial job now for testing purposes...
+2025-09-14 08:02:59,624 - INFO - ================================================================================
+2025-09-14 08:02:59,624 - INFO - STARTING FULL DAILY MARKETING PIPELINE RUN
+2025-09-14 08:02:59,624 - INFO - ================================================================================
+2025-09-14 08:02:59,624 - INFO - --- Stage 1: Scanning São Paulo ---
+2025-09-14 08:02:59,624 - INFO - Initiating event scan for URL: https://g1.globo.com/sp/sao-paulo/
+2025-09-14 08:02:59,624 - INFO - Scraping website content...
+2025-09-14 08:03:02,267 - INFO - Scraping successful. Content length: 15000 chars.
+2025-09-14 08:03:02,267 - INFO - Analyzing content with LLM...
+2025-09-14 08:03:03,709 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:03:03,731 - INFO - LLM analysis complete. Found 0 potential events.
+2025-09-14 08:03:03,731 - WARNING - No events found or returned from scanner for São Paulo.
+2025-09-14 08:03:03,731 - INFO - --- Stage 1: Scanning New York ---
+2025-09-14 08:03:03,731 - INFO - Initiating event scan for URL: https://gothamist.com/
+2025-09-14 08:03:03,731 - INFO - Scraping website content...
+2025-09-14 08:03:04,295 - INFO - Scraping successful. Content length: 5337 chars.
+2025-09-14 08:03:04,295 - INFO - Analyzing content with LLM...
+2025-09-14 08:03:04,973 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:03:04,978 - INFO - LLM analysis complete. Found 0 potential events.
+2025-09-14 08:03:04,978 - WARNING - No events found or returned from scanner for New York.
+2025-09-14 08:03:04,978 - INFO - --- Stage 1: Scanning Tokyo ---
+2025-09-14 08:03:04,978 - INFO - Initiating event scan for URL: https://www.timeout.com/tokyo/things-to-do
+2025-09-14 08:03:04,979 - INFO - Scraping website content...
+2025-09-14 08:03:06,128 - INFO - Scraping successful. Content length: 9644 chars.
+2025-09-14 08:03:06,129 - INFO - Analyzing content with LLM...
+2025-09-14 08:03:08,480 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:03:08,486 - INFO - LLM analysis complete. Found 4 potential events.
+2025-09-14 08:03:08,487 - INFO - --- Stage 2: Analyzing Events for Tokyo ---
+2025-09-14 08:03:08,487 - INFO - Initiating trend analysis for Tokyo...
+2025-09-14 08:03:08,487 - INFO - Loading trend analyzer prompt...
+2025-09-14 08:03:08,501 - INFO - Invoking LLM for analysis of 4 events...
+2025-09-14 08:03:17,972 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:03:17,977 - INFO - LLM analysis complete. Processed 4 events.
+2025-09-14 08:03:17,977 - INFO - Found 2 high-potential opportunities for Tokyo.
+2025-09-14 08:03:17,977 - INFO - 
+--- Stage 3: Starting Creative Generation for 2 events ---
+2025-09-14 08:03:17,977 - INFO - 
+>>> Generating campaign for: 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park' in Tokyo <<<
+2025-09-14 08:03:17,977 - INFO - Initiating creative direction for event: 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park'
+2025-09-14 08:03:17,977 - INFO - Loading creative director prompt...
+2025-09-14 08:03:17,993 - INFO - Invoking LLM to generate creative brief...
+2025-09-14 08:03:20,977 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:03:20,985 - INFO - Creative brief generated successfully.
+2025-09-14 08:03:20,985 - INFO - Generating copy and visuals for 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park'...
+2025-09-14 08:03:20,985 - INFO - Initiating copywriting for city: Tokyo
+2025-09-14 08:03:20,985 - INFO - Working from creative angle: 'Leverage the vibrant, whimsical world of the Kawaii Monster Café's transformation into an amusement park to showcase Coca-Cola as the ultimate enhancer of playful, imaginative experiences. Position Coca-Cola as the drink of choice for those seeking to embrace creativity, color, and joy in their everyday adventures.'
+2025-09-14 08:03:20,985 - INFO - Loading copywriter prompt...
+2025-09-14 08:03:21,004 - INFO - Invoking LLM to generate copy for Tokyo...
+2025-09-14 08:03:23,736 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:03:23,758 - INFO - Copy generated successfully.
+2025-09-14 08:03:23,758 - INFO - Initiating visual strategy for city: Tokyo
+2025-09-14 08:03:23,758 - INFO - Working from creative angle: 'Leverage the vibrant, whimsical world of the Kawaii Monster Café's transformation into an amusement park to showcase Coca-Cola as the ultimate enhancer of playful, imaginative experiences. Position Coca-Cola as the drink of choice for those seeking to embrace creativity, color, and joy in their everyday adventures.'
+2025-09-14 08:03:23,758 - INFO - Loading visual strategist prompt...
+2025-09-14 08:03:23,768 - INFO - Invoking LLM to generate image prompt...
+2025-09-14 08:03:28,790 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:03:28,795 - INFO - Image prompt generated successfully.
+2025-09-14 08:03:28,795 - INFO - Initiating image creation process...
+2025-09-14 08:03:28,795 - INFO - Using prompt: 'A vibrant, whimsical scene set in the heart of Harajuku's Kawaii Monster Amusement Park, Tokyo. The ...'
+2025-09-14 08:04:47,592 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-09-14 08:04:48,920 - INFO - Saving image to file: campaign-images/campaign_image_20250914_080448.png
+2025-09-14 08:04:48,921 - INFO - >>> Successfully created full campaign package for 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park' <<<
+2025-09-14 08:04:48,921 - INFO - 
+>>> Generating campaign for: 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo' in Tokyo <<<
+2025-09-14 08:04:48,921 - INFO - Initiating creative direction for event: 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo'
+2025-09-14 08:04:48,921 - INFO - Loading creative director prompt...
+2025-09-14 08:04:48,935 - INFO - Invoking LLM to generate creative brief...
+2025-09-14 08:04:52,060 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:04:52,081 - INFO - Creative brief generated successfully.
+2025-09-14 08:04:52,081 - INFO - Generating copy and visuals for 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo'...
+2025-09-14 08:04:52,081 - INFO - Initiating copywriting for city: Tokyo
+2025-09-14 08:04:52,082 - INFO - Working from creative angle: 'Position Coca-Cola as the beverage of choice that complements the vibrant, creative energy of Pharrell and Nigo's new cultural complex, seamlessly integrating into moments of artistic expression, music, and fashion as a symbol of universal connection and shared joy.'
+2025-09-14 08:04:52,082 - INFO - Loading copywriter prompt...
+2025-09-14 08:04:52,099 - INFO - Invoking LLM to generate copy for Tokyo...
+2025-09-14 08:04:54,179 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:04:54,188 - INFO - Copy generated successfully.
+2025-09-14 08:04:54,188 - INFO - Initiating visual strategy for city: Tokyo
+2025-09-14 08:04:54,188 - INFO - Working from creative angle: 'Position Coca-Cola as the beverage of choice that complements the vibrant, creative energy of Pharrell and Nigo's new cultural complex, seamlessly integrating into moments of artistic expression, music, and fashion as a symbol of universal connection and shared joy.'
+2025-09-14 08:04:54,188 - INFO - Loading visual strategist prompt...
+2025-09-14 08:04:54,200 - INFO - Invoking LLM to generate image prompt...
+2025-09-14 08:04:57,433 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:04:57,437 - INFO - Image prompt generated successfully.
+2025-09-14 08:04:57,437 - INFO - Initiating image creation process...
+2025-09-14 08:04:57,437 - INFO - Using prompt: 'A vibrant and exhilarating scene set in the heart of Tokyo's new Pharrell and Nigo cultural complex....'
+2025-09-14 08:06:16,275 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-09-14 08:06:17,360 - INFO - Saving image to file: campaign-images/campaign_image_20250914_080617.png
+2025-09-14 08:06:17,362 - INFO - >>> Successfully created full campaign package for 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo' <<<
+2025-09-14 08:09:53,790 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-14 08:09:53,790 - INFO - Scheduler configured to run daily at 3:00 AM. Press Ctrl+C to exit.
+2025-09-14 08:09:53,790 - INFO - Running an initial job now for testing purposes...
+2025-09-14 08:09:53,790 - INFO - ================================================================================
+2025-09-14 08:09:53,790 - INFO - STARTING FULL DAILY MARKETING PIPELINE RUN
+2025-09-14 08:09:53,790 - INFO - ================================================================================
+2025-09-14 08:09:53,790 - INFO - --- Stage 1: Scanning São Paulo ---
+2025-09-14 08:09:53,790 - INFO - Initiating event scan for URL: https://g1.globo.com/sp/sao-paulo/
+2025-09-14 08:09:53,790 - INFO - Scraping website content...
+2025-09-14 08:09:56,283 - INFO - Scraping successful. Content length: 15000 chars.
+2025-09-14 08:09:56,283 - INFO - Analyzing content with LLM...
+2025-09-14 08:09:57,551 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:09:57,578 - INFO - LLM analysis complete. Found 0 potential events.
+2025-09-14 08:09:57,578 - WARNING - No events found or returned from scanner for São Paulo.
+2025-09-14 08:09:57,578 - INFO - --- Stage 1: Scanning New York ---
+2025-09-14 08:09:57,578 - INFO - Initiating event scan for URL: https://gothamist.com/
+2025-09-14 08:09:57,578 - INFO - Scraping website content...
+2025-09-14 08:09:57,958 - INFO - Scraping successful. Content length: 5337 chars.
+2025-09-14 08:09:57,958 - INFO - Analyzing content with LLM...
+2025-09-14 08:09:58,875 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:09:58,894 - INFO - LLM analysis complete. Found 1 potential events.
+2025-09-14 08:09:58,894 - INFO - --- Stage 2: Analyzing Events for New York ---
+2025-09-14 08:09:58,894 - INFO - Initiating trend analysis for New York...
+2025-09-14 08:09:58,894 - INFO - Loading trend analyzer prompt...
+2025-09-14 08:09:58,910 - INFO - Invoking LLM for analysis of 1 events...
+2025-09-14 08:10:01,331 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:10:01,334 - INFO - LLM analysis complete. Processed 1 events.
+2025-09-14 08:10:01,335 - INFO - --- Stage 1: Scanning Tokyo ---
+2025-09-14 08:10:01,335 - INFO - Initiating event scan for URL: https://www.timeout.com/tokyo/things-to-do
+2025-09-14 08:10:01,335 - INFO - Scraping website content...
+2025-09-14 08:10:01,578 - INFO - Scraping successful. Content length: 9644 chars.
+2025-09-14 08:10:01,578 - INFO - Analyzing content with LLM...
+2025-09-14 08:10:03,669 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:10:03,682 - INFO - LLM analysis complete. Found 4 potential events.
+2025-09-14 08:10:03,682 - INFO - --- Stage 2: Analyzing Events for Tokyo ---
+2025-09-14 08:10:03,682 - INFO - Initiating trend analysis for Tokyo...
+2025-09-14 08:10:03,682 - INFO - Loading trend analyzer prompt...
+2025-09-14 08:10:03,697 - INFO - Invoking LLM for analysis of 4 events...
+2025-09-14 08:10:11,439 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:10:11,443 - INFO - LLM analysis complete. Processed 4 events.
+2025-09-14 08:10:11,444 - INFO - Found 2 high-potential opportunities for Tokyo.
+2025-09-14 08:10:11,444 - INFO - 
+--- Stage 3: Starting Creative Generation for 2 events ---
+2025-09-14 08:10:11,444 - INFO - 
+>>> Generating campaign for: 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park' in Tokyo <<<
+2025-09-14 08:10:11,444 - INFO - Initiating creative direction for event: 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park'
+2025-09-14 08:10:11,444 - INFO - Loading creative director prompt...
+2025-09-14 08:10:11,464 - INFO - Invoking LLM to generate creative brief...
+2025-09-14 08:10:16,348 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:10:16,374 - INFO - Creative brief generated successfully.
+2025-09-14 08:10:16,375 - INFO - Generating copy and visuals for 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park'...
+2025-09-14 08:10:16,375 - INFO - Initiating copywriting for city: Tokyo
+2025-09-14 08:10:16,375 - INFO - Working from creative angle: 'Position Coca-Cola as the essential refreshment that enhances the whimsical and vibrant experience of the Kawaii Monster Amusement Park. Just like the café, Coca-Cola adds a burst of joy and color to every moment, making it a natural companion for visitors immersed in the playful and creative atmosphere.'
+2025-09-14 08:10:16,375 - INFO - Loading copywriter prompt...
+2025-09-14 08:10:16,396 - INFO - Invoking LLM to generate copy for Tokyo...
+2025-09-14 08:10:18,504 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:10:18,508 - INFO - Copy generated successfully.
+2025-09-14 08:10:18,508 - INFO - Initiating visual strategy for city: Tokyo
+2025-09-14 08:10:18,508 - INFO - Working from creative angle: 'Position Coca-Cola as the essential refreshment that enhances the whimsical and vibrant experience of the Kawaii Monster Amusement Park. Just like the café, Coca-Cola adds a burst of joy and color to every moment, making it a natural companion for visitors immersed in the playful and creative atmosphere.'
+2025-09-14 08:10:18,508 - INFO - Loading visual strategist prompt...
+2025-09-14 08:10:18,527 - INFO - Invoking LLM to generate image prompt...
+2025-09-14 08:10:22,470 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:10:22,474 - INFO - Image prompt generated successfully.
+2025-09-14 08:10:22,475 - INFO - Initiating image creation process...
+2025-09-14 08:10:22,475 - INFO - Using prompt: 'A vibrant, colorful scene set inside the Kawaii Monster Amusement Park in Tokyo's Harajuku district....'
+2025-09-14 08:11:33,475 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-09-14 08:11:34,689 - INFO - Saving image to file: campaign-images/campaign_image_20250914_081134.png
+2025-09-14 08:11:34,691 - INFO - >>> Successfully created full campaign package for 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park' <<<
+2025-09-14 08:11:34,691 - INFO - 
+>>> Generating campaign for: 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo' in Tokyo <<<
+2025-09-14 08:11:34,691 - INFO - Initiating creative direction for event: 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo'
+2025-09-14 08:11:34,691 - INFO - Loading creative director prompt...
+2025-09-14 08:11:34,709 - INFO - Invoking LLM to generate creative brief...
+2025-09-14 08:11:39,040 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:11:39,055 - INFO - Creative brief generated successfully.
+2025-09-14 08:11:39,055 - INFO - Generating copy and visuals for 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo'...
+2025-09-14 08:11:39,055 - INFO - Initiating copywriting for city: Tokyo
+2025-09-14 08:11:39,055 - INFO - Working from creative angle: 'Position Coca-Cola as the beverage that fuels creativity and connection, seamlessly integrating into the vibrant and diverse cultural experiences offered by the Pharrell and Nigo complex. Emphasize Coca-Cola as a timeless symbol of unity and inspiration, enhancing moments of artistic exploration and cultural exchange.'
+2025-09-14 08:11:39,055 - INFO - Loading copywriter prompt...
+2025-09-14 08:11:39,072 - INFO - Invoking LLM to generate copy for Tokyo...
+2025-09-14 08:11:41,397 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:11:41,401 - INFO - Copy generated successfully.
+2025-09-14 08:11:41,401 - INFO - Initiating visual strategy for city: Tokyo
+2025-09-14 08:11:41,401 - INFO - Working from creative angle: 'Position Coca-Cola as the beverage that fuels creativity and connection, seamlessly integrating into the vibrant and diverse cultural experiences offered by the Pharrell and Nigo complex. Emphasize Coca-Cola as a timeless symbol of unity and inspiration, enhancing moments of artistic exploration and cultural exchange.'
+2025-09-14 08:11:41,401 - INFO - Loading visual strategist prompt...
+2025-09-14 08:11:41,420 - INFO - Invoking LLM to generate image prompt...
+2025-09-14 08:11:45,529 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:11:47,425 - INFO - Image prompt generated successfully.
+2025-09-14 08:11:47,426 - INFO - Initiating image creation process...
+2025-09-14 08:11:47,426 - INFO - Using prompt: 'Dynamic wide shot of the Pharrell and Nigo cultural complex in Tokyo, a hub of vibrant architecture ...'
+2025-09-14 08:13:01,972 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-09-14 08:13:03,223 - INFO - Saving image to file: campaign-images/campaign_image_20250914_081303.png
+2025-09-14 08:13:03,226 - INFO - >>> Successfully created full campaign package for 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo' <<<
+2025-09-14 08:13:03,226 - INFO - 
+Successfully saved 2 full campaign packages to campaign-packages/full_campaign_packages_2025-09-14.json
+2025-09-14 08:13:03,226 - INFO - ================================================================================
+2025-09-14 08:13:03,226 - INFO - FULL DAILY MARKETING PIPELINE RUN FINISHED
+2025-09-14 08:13:03,226 - INFO - ================================================================================
+2025-09-14 08:13:03,227 - INFO - Added job "run_daily_marketing_pipeline" to job store "default"
+2025-09-14 08:13:03,227 - INFO - Scheduler started
+2025-09-14 08:32:02,592 - INFO - Scheduler stopped.
+2025-09-14 08:53:19,645 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-09-14 08:53:19,646 - INFO - Scheduler configured to run daily at 3:00 AM. Press Ctrl+C to exit.
+2025-09-14 08:53:19,646 - INFO - Running an initial job now for testing purposes...
+2025-09-14 08:53:19,646 - INFO - ================================================================================
+2025-09-14 08:53:19,646 - INFO - STARTING FULL DAILY MARKETING PIPELINE RUN
+2025-09-14 08:53:19,646 - INFO - ================================================================================
+2025-09-14 08:53:19,646 - INFO - --- Stage 1: Scanning Tokyo ---
+2025-09-14 08:53:19,646 - INFO - Initiating event scan for URL: https://www.timeout.com/tokyo/things-to-do
+2025-09-14 08:53:19,646 - INFO - Scraping website content...
+2025-09-14 08:53:20,746 - INFO - Scraping successful. Content length: 9644 chars.
+2025-09-14 08:53:20,746 - INFO - Analyzing content with LLM...
+2025-09-14 08:53:27,222 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:53:27,246 - INFO - LLM analysis complete. Found 4 potential events.
+2025-09-14 08:53:27,246 - INFO - --- Stage 2: Analyzing Events for Tokyo ---
+2025-09-14 08:53:27,246 - INFO - Initiating trend analysis for Tokyo...
+2025-09-14 08:53:27,246 - INFO - Loading trend analyzer prompt...
+2025-09-14 08:53:27,260 - INFO - Invoking LLM for analysis of 4 events...
+2025-09-14 08:53:36,901 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:53:36,905 - INFO - LLM analysis complete. Processed 4 events.
+2025-09-14 08:53:36,905 - INFO - Found 2 high-potential opportunities for Tokyo.
+2025-09-14 08:53:36,906 - INFO - 
+--- Stage 3: Starting Creative Generation for 2 events ---
+2025-09-14 08:53:36,906 - INFO - 
+>>> Generating campaign for: 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park' in Tokyo <<<
+2025-09-14 08:53:36,906 - INFO - Initiating creative direction for event: 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park'
+2025-09-14 08:53:36,906 - INFO - Loading creative director prompt...
+2025-09-14 08:53:36,928 - INFO - Invoking LLM to generate creative brief...
+2025-09-14 08:53:39,455 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:53:39,460 - INFO - Creative brief generated successfully.
+2025-09-14 08:53:39,460 - INFO - Generating copy and visuals for 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park'...
+2025-09-14 08:53:39,460 - INFO - Initiating copywriting for city: Tokyo
+2025-09-14 08:53:39,460 - INFO - Working from creative angle: 'Leverage the vibrant and whimsical atmosphere of the Kawaii Monster Café amusement park to position Coca-Cola as a natural companion to this colorful experience, embodying the spirit of togetherness and joy that the park represents.'
+2025-09-14 08:53:39,460 - INFO - Loading copywriter prompt...
+2025-09-14 08:53:39,481 - INFO - Invoking LLM to generate copy for Tokyo...
+2025-09-14 08:53:41,702 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:53:41,705 - INFO - Copy generated successfully.
+2025-09-14 08:53:41,706 - INFO - Initiating visual strategy for city: Tokyo
+2025-09-14 08:53:41,706 - INFO - Working from creative angle: 'Leverage the vibrant and whimsical atmosphere of the Kawaii Monster Café amusement park to position Coca-Cola as a natural companion to this colorful experience, embodying the spirit of togetherness and joy that the park represents.'
+2025-09-14 08:53:41,706 - INFO - Loading visual strategist prompt...
+2025-09-14 08:53:41,726 - INFO - Invoking LLM to generate image prompt...
+2025-09-14 08:53:45,756 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:53:45,760 - INFO - Image prompt generated successfully.
+2025-09-14 08:53:45,760 - INFO - Initiating image creation process...
+2025-09-14 08:53:45,761 - INFO - Using prompt: 'A vibrant, whimsical scene set inside the Kawaii Monster Café in Harajuku, Tokyo, capturing the esse...'
+2025-09-14 08:54:54,704 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-09-14 08:54:56,073 - INFO - Saving image to file: campaign-images/campaign_image_20250914_085456.png
+2025-09-14 08:54:56,074 - INFO - >>> Successfully created full campaign package for 'Harajuku’s iconic Kawaii Monster Café is coming back – as an amusement park' <<<
+2025-09-14 08:54:56,074 - INFO - 
+>>> Generating campaign for: 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo' in Tokyo <<<
+2025-09-14 08:54:56,074 - INFO - Initiating creative direction for event: 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo'
+2025-09-14 08:54:56,074 - INFO - Loading creative director prompt...
+2025-09-14 08:54:56,085 - INFO - Invoking LLM to generate creative brief...
+2025-09-14 08:54:59,416 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:54:59,429 - INFO - Creative brief generated successfully.
+2025-09-14 08:54:59,429 - INFO - Generating copy and visuals for 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo'...
+2025-09-14 08:54:59,429 - INFO - Initiating copywriting for city: Tokyo
+2025-09-14 08:54:59,429 - INFO - Working from creative angle: 'Position Coca-Cola as the catalyst for cultural connection at the new Tokyo complex, celebrating the diverse artistic expressions and creative collaborations that define the space. Leverage the brand's history of fostering shared experiences to seamlessly integrate into this hub of innovation and culture.'
+2025-09-14 08:54:59,429 - INFO - Loading copywriter prompt...
+2025-09-14 08:54:59,442 - INFO - Invoking LLM to generate copy for Tokyo...
+2025-09-14 08:55:01,370 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:55:01,378 - INFO - Copy generated successfully.
+2025-09-14 08:55:01,378 - INFO - Initiating visual strategy for city: Tokyo
+2025-09-14 08:55:01,378 - INFO - Working from creative angle: 'Position Coca-Cola as the catalyst for cultural connection at the new Tokyo complex, celebrating the diverse artistic expressions and creative collaborations that define the space. Leverage the brand's history of fostering shared experiences to seamlessly integrate into this hub of innovation and culture.'
+2025-09-14 08:55:01,378 - INFO - Loading visual strategist prompt...
+2025-09-14 08:55:01,397 - INFO - Invoking LLM to generate image prompt...
+2025-09-14 08:55:05,092 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:55:05,095 - INFO - Image prompt generated successfully.
+2025-09-14 08:55:05,095 - INFO - Initiating image creation process...
+2025-09-14 08:55:05,095 - INFO - Using prompt: 'A vibrant, bustling scene set in the heart of Tokyo's latest cultural complex, with the iconic Tokyo...'
+2025-09-14 08:56:33,865 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-09-14 08:56:35,082 - INFO - Saving image to file: campaign-images/campaign_image_20250914_085635.png
+2025-09-14 08:56:35,083 - INFO - >>> Successfully created full campaign package for 'Pharrell and Nigo team up to open a massive cultural complex in Tokyo' <<<
+2025-09-14 08:56:35,087 - INFO - 
+Successfully saved 2 full campaign packages to campaign-packages/full_campaign_packages_2025-09-14.json
+2025-09-14 08:56:35,087 - INFO - Loading markdown prompt...
+2025-09-14 08:56:35,113 - INFO - Invoking LLM to generate the markdown file.
+2025-09-14 08:56:42,019 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 08:56:42,061 - INFO - Copy generated successfully.
+2025-09-14 08:56:42,062 - INFO - 
+Successfully saved full campaign packages as 2025-09-14.md
+2025-09-14 08:56:42,062 - INFO - ================================================================================
+2025-09-14 08:56:42,062 - INFO - FULL DAILY MARKETING PIPELINE RUN FINISHED
+2025-09-14 08:56:42,062 - INFO - ================================================================================
+2025-09-14 08:56:42,063 - INFO - Added job "run_daily_marketing_pipeline" to job store "default"
+2025-09-14 08:56:42,063 - INFO - Scheduler started
